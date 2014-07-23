@@ -13,8 +13,9 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
+
 task runApp(dependsOn: 'classes', type: JavaExec) {
-    main = 'tmn.hibernate.tutorial._14.App'
+    main = 'tmn.hibernate.tutorial._22_23.App'
     classpath = sourceSets.main.runtimeClasspath
 }
 
