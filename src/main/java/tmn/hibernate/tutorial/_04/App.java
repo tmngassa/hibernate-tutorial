@@ -1,9 +1,8 @@
-package tmn.hibernate.tutorial;
+package tmn.hibernate.tutorial._04;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import tmn.hibernate.tutorial.model.Employee;
 import tmn.hibernate.tutorial.util.HibernateUtil;
 
 public class App 
@@ -14,16 +13,10 @@ public class App
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         
-        Employee employee = new Employee();
-        employee.setName("Ranga Reddy");
-        employee.setAge(25);
-        
-        long employeeId  = (Long)session.save(employee);
-        employee = (Employee) session.get(Employee.class, employeeId);
-        
-        System.out.println(employee);
-
-        session.save(employee);
+        UserDetails user = new UserDetails();
+        user.setUserName("Tomson");
+       
+        session.save(user);
         session.getTransaction().commit();
                 
         session.close();        
